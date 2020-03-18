@@ -146,11 +146,12 @@ body{
 .about
 {
     height: auto;
-    width:100%;
-    padding:0px 70px;
+    // width:100%;
+  
     margin-top: 10rem;
+    margin-left: 70px;
     display: flex;
-    overflow: hidden;
+    // overflow: hidden;
 
     .left{
 
@@ -188,13 +189,13 @@ body{
     }
 }
 .right{
-    width:50%;
+    width:40%;
     height: auto;
     img.team
     {
         background: url(/img/team.svg);
         width: 60%;
-        margin: 5% 20%;
+        margin: 20% 10%;
     }
 }
     // display: flex;
@@ -203,7 +204,7 @@ body{
 .stats
 {
     margin-left:70px;
-    width:100%;
+    // width:100%;
     height:auto;
     display: flex;
     .group
@@ -383,7 +384,7 @@ font-weight: bold;
     }
     .service{
         margin-top: 4rem;
-        width:100%;
+        // width:100%;
       
         justify-content: flex-start;
 display: flex;
@@ -544,7 +545,7 @@ font-weight: bold;
 }
 .team
 {
-    width:100%;
+    // width:100%;
     padding:0px 70px;
     h1
     {
@@ -576,7 +577,7 @@ font-weight: bold;
     .profiles
     {
         display: flex;
-        width:100%;
+        // width:100%;
         justify-content: center;
         .group{
             margin:0px 4rem;

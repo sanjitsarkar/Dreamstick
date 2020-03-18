@@ -141,13 +141,11 @@ body {
 
 .about {
   height: auto;
-  width: 100%;
-  padding: 0px 70px;
   margin-top: 10rem;
+  margin-left: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
 }
 
 .about .left {
@@ -183,19 +181,18 @@ body {
 }
 
 .about .right {
-  width: 50%;
+  width: 40%;
   height: auto;
 }
 
 .about .right img.team {
   background: url(/img/team.svg);
   width: 60%;
-  margin: 5% 20%;
+  margin: 20% 10%;
 }
 
 .stats {
   margin-left: 70px;
-  width: 100%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,7 +376,6 @@ body {
 
 .services .service {
   margin-top: 4rem;
-  width: 100%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -539,7 +535,6 @@ body {
 }
 
 .team {
-  width: 100%;
   padding: 0px 70px;
 }
 
@@ -571,7 +566,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
