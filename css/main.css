@@ -32,6 +32,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   left: 0;
   width: 100%;
   height: 10vh;
@@ -72,14 +75,13 @@ body {
 .navbar ul li:hover::after {
   content: "";
   position: absolute;
-  top: 50px;
+  top: 45px;
   left: 0;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: center center;
           transform-origin: center center;
-  color: #D91B5C;
-  background: #D91B5C;
+  background: white;
   width: 100%;
   height: 5px;
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -100,10 +102,25 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-left: 10%;
+  background-image: url(/img/curve_1.svg);
+  background-size: cover;
+  background-position: 0% 100%;
+  z-index: -4;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 40vh;
+}
+
+.top_sect .ill {
+  width: 45%;
+  margin-top: 20%;
+  margin-left: 10%;
+  z-index: -1;
+}
+
+.top_sect .left {
+  margin-top: 10%;
 }
 
 .top_sect .left h1 {
@@ -140,9 +157,19 @@ body {
 }
 
 .about {
+  border: 10px solid #D91B5C;
+  border-top: none;
+  border-bottom: none;
   height: auto;
+  background: #2b2b2b;
+  background-size: cover;
   margin-top: 10rem;
-  margin-left: 70px;
+  -webkit-clip-path: polygon(50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+          clip-path: polygon(50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+  padding: 10% 0px;
+  padding-left: 70px;
+  z-index: -2;
+  margin-bottom: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,7 +199,7 @@ body {
 }
 
 .about .left p {
-  color: #535151;
+  color: white;
   font-family: montserrat;
   line-height: 25px;
   font-size: 17px;
@@ -193,7 +220,14 @@ body {
 
 .stats {
   margin-left: 70px;
+  margin-bottom: 5%;
   height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,6 +241,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .stats .group .circle {
@@ -221,24 +258,34 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 3rem;
-  margin-right: 4rem;
-  height: 3rem;
-  border: 8px solid rgba(128, 128, 128, 0.753);
+  width: 8rem;
+  margin-right: 5rem;
+  height: 8rem;
+  border: 10px solid rgba(128, 128, 128, 0.753);
   background: transparent;
   border-radius: 100%;
 }
 
 .stats .group h3 {
-  color: #171b1f;
+  text-align: center;
+  color: #D91B5C;
+  font-weight: bolder;
+  font-size: 25px;
+  margin-left: -33%;
 }
 
 .solution {
-  padding: 0px 70px;
+  -webkit-clip-path: polygon(50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+          clip-path: polygon(50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+  padding: 50px 70px;
+  background-color: #343E46;
+  border: 10px solid #D91B5C;
+  border-top: none;
+  border-bottom: none;
 }
 
 .solution h1 {
-  color: #D91B5C;
+  color: white;
   text-transform: uppercase;
   position: relative;
   font-size: 25px;
@@ -250,7 +297,7 @@ body {
   position: absolute;
   top: 35px;
   left: 0;
-  background: #D91B5C;
+  background: white;
   width: 100%;
   height: 3px;
 }
@@ -287,7 +334,7 @@ body {
 }
 
 .solution .tab-contents .tab-content {
-  margin-right: .4rem;
+  margin-right: .8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,6 +344,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: white;
   cursor: pointer;
   width: 11%;
   padding: .2rem 1rem;
@@ -348,6 +396,7 @@ body {
 .services {
   padding: 0px 70px;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .services h1 {
@@ -405,11 +454,33 @@ body {
           align-items: center;
 }
 
-.services .service .left .group .title, .services .service .right .group .title {
-  width: 7rem;
-  height: 7rem;
-  padding: 2rem;
+.services .service .left .group .circle, .services .service .right .group .circle {
+  position: relative;
+}
+
+.services .service .left .group .circle:hover > .title, .services .service .right .group .circle:hover > .title {
+  -webkit-box-shadow: inset 0px 0px 10px black;
+          box-shadow: inset 0px 0px 10px black;
+}
+
+.services .service .left .group .circle:hover > h3, .services .service .right .group .circle:hover > h3 {
+  display: none;
   color: #D91B5C;
+}
+
+.services .service .left .group .circle h3, .services .service .right .group .circle h3 {
+  display: none;
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  z-index: 99;
+}
+
+.services .service .left .group .circle .title, .services .service .right .group .circle .title {
+  width: 5rem;
+  height: 5rem;
+  padding: 2rem;
+  color: #171b1f;
   border: 7px solid #D91B5C;
   -webkit-box-shadow: 0px 0px 10px black;
           box-shadow: 0px 0px 10px black;
@@ -432,6 +503,36 @@ body {
   border-radius: 100%;
 }
 
+.services .service .left .group .circle .title.brand-manage, .services .service .right .group .circle .title.brand-manage {
+  background-image: url("/img/management.svg");
+  background-size: cover;
+}
+
+.services .service .left .group .circle .title.event, .services .service .right .group .circle .title.event {
+  background-image: url("/img/management (1).svg");
+  background-size: cover;
+}
+
+.services .service .left .group .circle .title.social, .services .service .right .group .circle .title.social {
+  background-image: url("/img/social-media.svg");
+  background-size: cover;
+}
+
+.services .service .left .group .circle .title.creative-des, .services .service .right .group .circle .title.creative-des {
+  background-image: url("/img/light-bulb.svg");
+  background-size: cover;
+}
+
+.services .service .left .group .circle .title.promo, .services .service .right .group .circle .title.promo {
+  background-image: url("/img/loudspeaker.svg");
+  background-size: cover;
+}
+
+.services .service .left .group .circle .title.writting, .services .service .right .group .circle .title.writting {
+  background-image: url("/img/edit.svg");
+  background-size: cover;
+}
+
 .services .service .left .group ul, .services .service .right .group ul {
   list-style: none;
 }
@@ -446,11 +547,14 @@ body {
 }
 
 .why {
-  padding: 0px 70px;
+  padding: 10rem 70px;
+  background-color: #343E46;
+  -webkit-clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
+          clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
 }
 
 .why h1 {
-  color: #D91B5C;
+  color: white;
   text-transform: uppercase;
   position: relative;
   font-size: 25px;
@@ -463,13 +567,13 @@ body {
   position: absolute;
   top: 35px;
   left: 0;
-  background: #D91B5C;
+  background: white;
   width: 100%;
   height: 3px;
 }
 
 .why p {
-  color: #171b1f;
+  color: white;
   font-weight: bold;
 }
 
@@ -495,12 +599,27 @@ body {
   margin-right: 1rem;
 }
 
+.why .features .group .logo.value {
+  background-image: url(/img/rupee.svg);
+  background-size: cover;
+}
+
+.why .features .group .logo.creativity {
+  background-image: url(/img/light-bulb.svg);
+  background-size: cover;
+}
+
+.why .features .group .logo.solutions {
+  background-image: url(/img/jigsaw.svg);
+  background-size: cover;
+}
+
 .why .features .group .desc h3.title {
-  color: #343E46;
+  color: white;
 }
 
 .why .features .group .desc p {
-  color: #333333;
+  color: #e9e9e9;
   line-height: 1.5rem;
   font-size: 1rem;
   font-weight: 500;
@@ -576,6 +695,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -589,9 +709,10 @@ body {
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 20px 5px #D91B5C;
           box-shadow: 0px 0px 20px 5px #D91B5C;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQJR6BqqLi6y004j182y-DQqexGNssQn5AHlZ7DUBXpYQe3H7P);
+  background-size: cover;
   width: 6rem;
   height: 6rem;
-  background: white;
   border: 4px solid #D91B5C;
   border-radius: 100%;
 }
@@ -624,6 +745,8 @@ body {
 }
 
 footer {
+  border: 0px solid #D91B5C;
+  border-top-width: 4px;
   width: 100%;
   height: 50vh;
   display: -webkit-box;
