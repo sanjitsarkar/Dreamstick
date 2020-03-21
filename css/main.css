@@ -941,6 +941,7 @@ footer .top .middle form input, footer .top .middle form textarea {
           box-sizing: border-box;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  resize: none;
 }
 
 footer .top .middle form input::-webkit-input-placeholder, footer .top .middle form textarea::-webkit-input-placeholder {

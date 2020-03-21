@@ -944,6 +944,7 @@ footer{
                     // border-bottom-width: 2px;
                     box-sizing: border-box;
                     transition: all .3s ease-in-out;
+                    resize: none;
                     &::placeholder
                     {
                         color:rgba(255, 255, 255, 0.596);
