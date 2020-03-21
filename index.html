@@ -11,27 +11,30 @@
 </head>
 
 <body>
+  <a href="#" class="top-button">
+<i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+  </a>
   <div class="navbar">
     <img src="img/logo_white.png" alt="" srcset="" id="logo">
     <ul>
 
-      <li><a href="">Home</a></li>
-      <li><a href="">About</a></li>
-      <li><a href="">Solutions</a></li>
-      <li><a href="">Services</a></li>
-      <li><a href="">Team</a></li>
-      <li><a href="">Contact</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#solution">Solutions</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#footer">Contact</a></li>
     </ul>
   </div>
  <div class="top_sect">
     <div class="left">
       <h1 data-aos="fade-right">We create your dreams.</h1>
-      <button data-aos="fade-top">Get Started</button>
+      <button data-aos="fade-top" class="get">Get Started</button>
     </div>
 
     <img src="/img/ill.svg" class="ill">
   </div>
-  <div class="about">
+  <div class="about" id="about">
     <div class="left">
       <h1 data-aos="fade-right">About Us</h1>
       <p data-aos="fade-bottom">
@@ -56,29 +59,30 @@
   </div>
   <div class="stats" >
     <div class="group" data-aos="zoom-in">
-      <div class="circle">90%</div>
+      <!-- <div class="circle" id="circle">90%</div> -->
+      <div class="circle" id="circle1"></div>
       <h3>Design</h3>
     </div>
 
     <div class="group" data-aos="zoom-in">
-      <div class="circle">90%</div>
+      <div class="circle" id="circle2"></div>
       <h3>Content</h3>
     </div>
     <div class="group" data-aos="zoom-in">
-      <div class="circle">80%</div>
+      <div class="circle" id="circle3"></div>
       <h3>Brand</h3>
     </div>
     <div class="group" data-aos="zoom-in">
-      <div class="circle">85%</div>
+      <div class="circle" id="circle4"></div>
 
       <h3>Promotions</h3>
     </div>
     <div class="group" data-aos="zoom-in">
-      <div class="circle">75%</div>
+      <div class="circle" id="circle5"></div>
       <h3>Events</h3>
     </div>
   </div>
-  <div class="solution">
+  <div class="solution" id="solution">
     <h1>Solution Dreamstick</h1>
     <div class="tabs">
       <div class="button tab active">Show All</div>
@@ -111,7 +115,7 @@
       </div>
     </div>
   </div>
-  <div class="services">
+  <div class="services" id="services">
     <h1>What We Serve</h1>
     <p>Dreamstick’s digital marketing service offerings to ensure value is delivered</p>
     <div class="service">
@@ -219,7 +223,7 @@
     </div>
   </div>
   </div>
-  <div class="why">
+  <div class="why" id="why">
     <h1>Why Dreamstick</h1>
     <p>We hold a deep understanding of effective communication and can deploy appropriate tools to create the impact and hold the
       required attention of your stakeholders. So what actually differentiates us from our competitors:
@@ -277,7 +281,7 @@ your reputed brand and ensure healthy relationship between us.
   <!-- <div class="whom">
     <h1>Whom we have served</h1>
   </div> -->
-  <div class="team">
+  <div class="team" id="team">
     <h1>Our Teams</h1>
     <p></p>
     <div class="profiles owl-carousel owl-theme">
@@ -319,24 +323,26 @@ your reputed brand and ensure healthy relationship between us.
       <div class="dot"></div>
     </div> -->
   </div> 
-  <footer>
+  <footer id="footer">
     <div class="top">
       <div class="left">
         <h1 id="ad">GET IN TOUCH</h1>
         <pre>
-           1740, Shop No. 5, Sher Singh
-           Bazar, Kotla Mubarakpur,
-           New Delhi - 110003
-           +91 9625406667 | +91 9625623593
-           info@dreamstick.com
+          <i class="fa fa-home" aria-hidden="true"></i>1740, Shop No. 5, Sher Singh
+               Bazar, Kotla Mubarakpur,
+               New Delhi - 110003
+           <i class="fa fa-phone"></i>+91 9625406667 | +91 9625623593
+          <i class="fa fa-envelope"></i>info@dreamstick.com
          </pre>
         <h1>COMMUNICATION ADDRESS</h1>
         <pre>
-           JF-1, Flat No. 5, Gupta Colony, Malviya Nagar, New Delhi
+          <i class="fa fa-home" aria-hidden="true"></i>JF-1, Flat No. 5, Gupta Colony, Malviya Nagar, New Delhi
          </pre>
       </div>
       <div class="middle">
+        <h1>CONTACT US</h1>
         <form action="">
+         
           <div class="top">
             <input type="text" name="" id="" placeholder="Your Name">
             <input type="text" name="" id="" placeholder="Your Email">
@@ -361,14 +367,19 @@ your reputed brand and ensure healthy relationship between us.
     </div>
   </footer>
   <script src="js/jquery.min.js"></script>
+  <script src="js/progressbar.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  
+  <script src="js/bar.js"></script>
   <script>
     AOS.init();
     $(document).ready(function(){
   $(".owl-carousel").owlCarousel();
 });
+// progressbar.js@1.0.0 version is used
+// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+
+// Number from 0.0 to 1.0
   </script>
 </body>
 

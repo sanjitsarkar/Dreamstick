@@ -4,6 +4,7 @@
 html, body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -95,6 +96,35 @@ body {
   text-decoration: none;
   color: white;
   position: relative;
+}
+
+a.top-button {
+  text-decoration: none;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid white;
+  background-color: #D91B5C;
+  border-radius: 100%;
+  z-index: 999;
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
+  bottom: 2rem;
+  right: 2rem;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a.top-button i {
+  color: white;
+  font-size: 25px;
 }
 
 .top_sect {
@@ -290,9 +320,6 @@ body {
 }
 
 .stats .group .circle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   color: white;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -304,9 +331,7 @@ body {
   width: 8rem;
   margin-right: 5rem;
   height: 8rem;
-  border: 10px solid white;
-  background: transparent;
-  border-radius: 100%;
+  position: relative;
 }
 
 .stats .group h3 {
@@ -314,7 +339,7 @@ body {
   color: white;
   font-weight: bolder;
   font-size: 25px;
-  margin-left: -33%;
+  margin-left: -37%;
 }
 
 .solution {
@@ -802,7 +827,6 @@ footer {
   border: 0px solid #D91B5C;
   border-top-width: 4px;
   width: 100%;
-  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -810,7 +834,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2rem 0px;
+  padding: 2rem 0px 0px 0px;
   background: #343E46;
 }
 
@@ -868,7 +892,34 @@ footer .top .left pre {
   color: white;
   position: relative;
   left: -45px;
+  line-height: 1.8rem;
   font-family: montserrat;
+}
+
+footer .top .left pre i {
+  margin-right: .5rem;
+  font-size: 20px;
+  color: #D91B5C;
+}
+
+footer .top .middle h1 {
+  font-size: 18px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: white;
+  position: relative;
+}
+
+footer .top .middle h1::after {
+  text-align: center;
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  color: #D91B5C;
+  background: #D91B5C;
+  width: 33%;
+  height: 4px;
 }
 
 footer .top .middle form {
@@ -987,7 +1038,7 @@ footer .top .right {
   position: relative;
   width: 33%;
   height: 100%;
-  top: 20px;
+  top: -8.5rem;
 }
 
 footer .top .right h1 {
@@ -1040,7 +1091,7 @@ footer .top .right .links > *:hover {
 }
 
 footer .bottom {
-  height: 20vh;
+  height: 10vh;
   width: 100%;
   background: #171b1f;
   display: -webkit-box;
