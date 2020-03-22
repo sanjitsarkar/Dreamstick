@@ -190,7 +190,6 @@ a.top-button i {
 .top_sect .left button {
   padding: 13px 25px;
   margin-top: 10vh;
-  border: none;
   border: 1.5px solid transparent;
   color: white;
   font-size: 20px;
@@ -343,7 +342,8 @@ a.top-button i {
 }
 
 .solution {
-  padding: 50px 70px;
+  padding: 50px 0px;
+  padding-left: 70px;
   background-color: #343E46;
   border: 10px solid #D91B5C;
   border-top: none;
@@ -381,11 +381,15 @@ a.top-button i {
   color: white;
   font-weight: bold;
   border: 4px solid #e2e2e2;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .solution .tabs .tab.active, .solution .tabs .tab:hover {
   color: #dddddd;
   background: #D91B5C;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .solution .tab-contents {
@@ -411,6 +415,8 @@ a.top-button i {
           justify-content: center;
   background-color: #D91B5C;
   cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   width: 40%;
   height: 30vh;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.493);
@@ -420,6 +426,8 @@ a.top-button i {
 .solution .tab-contents .tab-content:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #D91B5C), to(rgba(255, 0, 149, 0.774)));
   background: linear-gradient(#D91B5C 20%, rgba(255, 0, 149, 0.774) 100%);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.493);
           box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.493);
 }
@@ -430,10 +438,14 @@ a.top-button i {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .solution .tab-contents .tab-content:hover > h3 + p {
   display: none;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .solution .tab-contents .tab-content h3 {
@@ -451,7 +463,8 @@ a.top-button i {
 }
 
 .services {
-  padding: 2rem 70px;
+  padding: 2rem;
+  padding-left: 70px;
   background-color: #D91B5C;
 }
 
@@ -506,14 +519,29 @@ a.top-button i {
   border-radius: 2rem;
   border: 4px solid #0099ff;
   height: 40vh;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 1rem 2rem;
   background-color: #343E46;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.63);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.63);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.services .service .left .group:hover, .services .service .right .group:hover {
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.63);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.63);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .services .service .left .group .circle, .services .service .right .group .circle {
@@ -523,14 +551,20 @@ a.top-button i {
 .services .service .left .group .circle:hover > .title, .services .service .right .group .circle:hover > .title {
   -webkit-box-shadow: inset 0px 0px 10px black;
           box-shadow: inset 0px 0px 10px black;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .services .service .left .group .circle:hover > h3, .services .service .right .group .circle:hover > h3 {
   display: block;
   color: #D91B5C;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .services .service .left .group .circle h3, .services .service .right .group .circle h3 {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   display: inline-block;
   position: absolute;
   white-space: nowrap;
@@ -544,6 +578,8 @@ a.top-button i {
   height: 5rem;
   padding: 2rem;
   color: white;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   border: 7px solid #D91B5C;
   -webkit-box-shadow: 0px 0px 10px black;
           box-shadow: 0px 0px 10px black;
@@ -616,7 +652,8 @@ a.top-button i {
 }
 
 .why {
-  padding: 3rem 70px;
+  padding: 3rem 0px;
+  padding-left: 70px;
   background-color: #343E46;
 }
 
@@ -652,12 +689,20 @@ a.top-button i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 90%;
   background: linear-gradient(45deg, #eee0e0, #dfdfdf);
   padding: 1rem 0rem 1rem 1rem;
   -webkit-box-shadow: 0px 0px 10px black;
           box-shadow: 0px 0px 10px black;
   border-right: 10px solid #D91B5C;
   border-left: 10px solid #343E46;
+}
+
+.why .features .group:hover {
+  -webkit-box-shadow: 0px 0px 20px black;
+          box-shadow: 0px 0px 20px black;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .why .features .group .logo {
