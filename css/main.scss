@@ -2,6 +2,7 @@
     $primary:#D91B5C;
     $secondary:#343E46;
     $accent:#343E46;
+    $blue:rgb(0, 174, 255);
     $black:rgb(23, 27, 31);
     $grey:rgba(128, 128, 128, 0.753);
     $grey-bg:rgb(255, 255, 255);
@@ -17,10 +18,13 @@ html,body
     
     box-sizing: border-box;
 }
+h1{
+    font-size: 1.56em;
+}
 body{
-    
+    scroll-snap-type: y proximity;
     display: flex;
-    // overflow: hidden;
+    overflow-y: scroll;
     width:100%;
     flex-direction: column;
     height: auto;
@@ -31,6 +35,7 @@ body{
     // align-items: center;
     // align-content: center;
     width:100%;
+   
 }
 .navbar {
     position: fixed;
@@ -43,6 +48,7 @@ body{
     width:100%;
     height: 10vh;
     background:$accent;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
     img#logo
     {
         width:200px;
@@ -99,7 +105,7 @@ a.top-button{
     width:3rem;
     height:3rem;
     border:2px solid white;
-    background-color: $primary;
+    background-color: $blue;
     // background-color: white;
     border-radius: 100%;
     z-index: 999;
@@ -113,13 +119,19 @@ a.top-button{
     i
     {
         color:white;
-        font-size: 25px;
+        font-size: x-large;
+          
     }
+}
+.sect
+{
+    scroll-snap-align: start;
 }
 .top_sect
 {
+    
     // clip-path: polygon(0 41%, 100% 16%, 100% 100%, 0% 100%);
-background: $grey;
+background: $accent;
     margin-top: 10vh;
     display: flex;
     // justify-content: space-around;
@@ -134,7 +146,7 @@ background: $grey;
         width:45%;
         margin-top:0%;
         margin-left:1%;
-        z-index: 99;
+        z-index: 2;
         animation: float 2s infinite alternate ease-in-out both;
     }
     @keyframes float {
@@ -176,11 +188,11 @@ transform: translateY(-10px);
             color: white;
             font-size: 20px;
             outline: none;
-            background: $primary;
+            background:$blue ;
             
             transform: scale(1);
             transition: all .3s ease-in-out;
-            box-shadow: 0px 0px 20px rgba(217, 27, 93, 0.432),0px 0px 50px rgba(217, 27, 93, 0.247),0px 0px 30px rgba(217, 27, 93, 0.432);
+            box-shadow: 0px 0px 20px transparentize($blue,0);
             &:hover{
                 // cursor: pointer;
             border:1.5px solid white;
@@ -229,7 +241,7 @@ background-position: left bottom;
        
        text-transform: uppercase;
        position: relative;
-       font-size: 25px;
+         
        display: inline-block;
        &::after
        {
@@ -248,8 +260,9 @@ background-position: left bottom;
         color:rgb(255, 255, 255);
         // padding:0px 70px;
         font-family: montserrat; 
-        line-height: 25px;
+        line-height: 1.7rem;
         font-size:17px;
+        // letter-spacing: 1px;
         width:90%;
         margin-right: 5%;
     }
@@ -319,7 +332,7 @@ transform: translateX(-10px);
             text-align: center;
             color:white;
             font-weight: bolder;
-            font-size: 25px;
+              
             margin-left:-37%;
         }
     }
@@ -342,7 +355,7 @@ transform: translateX(-10px);
        
        text-transform: uppercase;
        position: relative;
-       font-size: 25px;
+         
        display: inline-block;
        &::after
        {
@@ -474,7 +487,7 @@ p
        
        text-transform: uppercase;
        position: relative;
-       font-size: 25px;
+         
        margin-bottom: 2rem;;
        display: inline-block;
        &::after
@@ -516,7 +529,7 @@ display: flex;
         margin-right: 1rem;
         margin-bottom: 1rem;
         border-radius: 2rem;
-        border: 4px solid rgb(0, 153, 255);
+        border: 4px solid $blue;
         height: 40vh;
         transform: scale(.9);
         display: flex;
@@ -535,18 +548,18 @@ display: flex;
     .circle
     {
         position: relative;
-        &:hover>.title{
-            // filter:blur(5px) grayscale(100);
-            // opacity: .4;
-            box-shadow:inset 0px 0px 10px black;
-            transition: all .3s ease-in-out;
-        }
-        &:hover>h3{
-            // margin-bottom:150rem;
-            display: block;
-            color:$primary;
-            transition: all .3s ease-in-out;
-        }
+        // &:hover>.title{
+        //     // filter:blur(5px) grayscale(100);
+        //     // opacity: .4;
+        //     // box-shadow:inset 0px 0px 10px black;
+        //     transition: all .3s ease-in-out;
+        // }
+        // &:hover>h3{
+        //     // margin-bottom:150rem;
+        //     display: block;
+        //     color:$primary;
+        //     transition: all .3s ease-in-out;
+        // }
     h3
     {
         transition: all .3s ease-in-out;
@@ -572,7 +585,7 @@ display: flex;
             padding: 2rem;
             color:white;
             transition: all .3s ease-in-out;
-            border:7px solid $primary;
+            border:7px solid $blue;
             box-shadow:0px 0px 10px rgb(0, 0, 0);
             border-top: 0px;
             border-left: 0px;
@@ -656,7 +669,7 @@ line-height: 1.7rem;
        
        text-transform: uppercase;
        position: relative;
-       font-size: 25px;
+         
     //    margin-bottom: 2rem;
        display: inline-block;
        &::after
@@ -753,7 +766,7 @@ font-weight:500;
        
        text-transform: uppercase;
        position: relative;
-       font-size: 25px;
+         
        margin-bottom: 2rem;;
        display: inline-block;
        &::after
@@ -786,7 +799,7 @@ font-weight: bold;
        
        text-transform: uppercase;
        position: relative;
-       font-size: 25px;
+         
        margin-bottom: 2rem;;
        display: inline-block;
        &::after
@@ -874,6 +887,7 @@ footer{
     padding:2rem 0px 0px 0px;
         
     background: $secondary;
+    
     .top
     {
        
@@ -881,6 +895,10 @@ footer{
         justify-content: space-between;
        
         align-items: center;
+        @media only screen and (max-width:760px) {
+            
+            flex-direction:column;
+        }
         &>*
         {
             margin-right:50px;
@@ -914,18 +932,19 @@ footer{
                 }
             }
            
-            pre
+            p
             {
                 font-size: 15px;
                 color:white;
                 position: relative;
-                left: -45px;
+                // left: -45px;
                 line-height: 1.8rem;
                 font-family: montserrat;
                 i
                 {
                     margin-right: .5rem;
                     font-size: 20px;
+                    margin-left: 0rem;
                     color: $primary;
                 }
             }
