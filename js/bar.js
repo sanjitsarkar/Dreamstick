@@ -117,7 +117,7 @@ var bar4 = new ProgressBar.Circle(circle5, {
   text: {
     autoStyleContainer: false
   },
-  from: { color: '#aaa', width: 1 },
+  from: { color: 'rgb(0, 174, 255)', width: 1 },
   to: { color: '#fff', width: 4 },
   // Set default step function for all animate calls
   step: function(state, circle) {
