@@ -945,7 +945,7 @@ footer{
                     margin-right: .5rem;
                     font-size: 20px;
                     margin-left: 0rem;
-                    color: $primary;
+                    color: $blue;
                 }
             }
         }
@@ -1121,7 +1121,7 @@ padding:7px 10px;
                     cursor: pointer;
                     &:hover{
                         transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                        color:$primary;
+                        color:$blue;
                         transform: scale(1.5);
                         
                     }
